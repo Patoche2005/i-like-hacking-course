@@ -1,0 +1,16 @@
+title: I like hacking
+description: I like Hacking
+template:
+  repo: i-like-hacking-template
+  name: i-like-hacking
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
